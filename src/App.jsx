@@ -36,25 +36,25 @@ function App() {
     <main className="flex min-h-[100dvh] w-full items-center justify-center">
       <div
         ref={wrapperRef}
-        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[--color-a] to-[--color-c] via-[--color-b] [transition-property:_--color-a,_--color-b,_--color-c] ease-in duration-500 p-8 text-white"
+        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[--color-a] to-[--color-c] via-[--color-b] [transition-property:_--color-a,_--color-b,_--color-c] ease-in duration-500 p-8 text-white before:absolute before:left-[20%] before:top-[10%] before:h-[50%] before:w-[70%] before:origin-[60%] before:bg-gradient-to-br before:from-[--color-a] before:to-[--color-b] before:rounded-3xl before:blur-[50px] before:brightness-125 before:animate-blob"
       >
         <div className="relative z-10">
           <h1 className="mb-12 text-5xl font-medium leading-tight">How are you feeling today?</h1>
+
+          <h2 className="mb-4 text-center text-2xl font-medium">
+            {feelingLabelMap[feeling]}
+          </h2>
+
+          <input
+            className="range"
+            onChange={e => setFeeling(e.target.value)}
+            type="range"
+            value={feeling}
+            min={1}
+            max={3}
+            step={1}
+          />
         </div>
-
-        <h2 className="mb-4 text-center text-2xl font-medium">
-          {feelingLabelMap[feeling]}
-        </h2>
-
-        <input
-          className="range"
-          onChange={e => setFeeling(e.target.value)}
-          type="range"
-          value={feeling}
-          min={1}
-          max={3}
-          step={1}
-        />
       </div>
     </main>
   )
