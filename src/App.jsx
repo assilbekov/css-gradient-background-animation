@@ -38,10 +38,10 @@ function App() {
     <main className="flex min-h-[100dvh] w-full items-center justify-center">
       <div
         ref={wrapperRef}
-        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-slate-500 text-white"
+        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-slate-500 p-8 text-white"
       >
         <div className="relative z-10">
-          <h1 className="mb-4 text-center text-2xl font-medium">How are you feeling today?</h1>
+          <h1 className="mb-12 text-5xl font-medium leading-tight">How are you feeling today?</h1>
         </div>
 
         <h2 className="mb-4 text-center text-2xl font-medium">
