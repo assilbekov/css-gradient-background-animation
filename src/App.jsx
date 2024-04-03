@@ -22,8 +22,6 @@ function App() {
   const wrapperRef = useRef(null);
   const [feeling, setFeeling] = useState(Feeling.Neutral)
 
-
-
   useEffect(() => {
     if (!wrapperRef.current) return
 
@@ -38,7 +36,7 @@ function App() {
     <main className="flex min-h-[100dvh] w-full items-center justify-center">
       <div
         ref={wrapperRef}
-        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-slate-500 p-8 text-white"
+        className="relative mx-auto aspect-[9/16] w-[360px] max-w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[--color-a] to-[--color-c] via-[--color-b] p-8 text-white"
       >
         <div className="relative z-10">
           <h1 className="mb-12 text-5xl font-medium leading-tight">How are you feeling today?</h1>
